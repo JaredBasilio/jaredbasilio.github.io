@@ -16,8 +16,7 @@ body {
     align-items: center;
     justify-self: center;
     margin: 0 auto;
-    height: 90vh;
-    background-color: #131313;
+    background-color: #121212;
     z-index: 1;
     width: 100%;
     max-width: 1300px;
@@ -58,23 +57,14 @@ h1 {
 }
 /*Nav Styles*/
 .navbar {
-    background: #131313;
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 999;
-    transition: all .5s ease-in-out;
-    transform: translateY(-70%); /* normal, hidden state */
-    opacity: 0%;
-}
-
-.navbar:hover {
-    transform: translateY(0%); /* when parent is hovered */
-    opacity: 100%;
 }
 
 .nav-wrapper {
@@ -119,9 +109,10 @@ h1 {
 .nav-link-wrapper a:hover {
     color: #db5461;
 }
+
 /*Info*/
 .section {
-    width: 45%;
+    width: 55%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -159,13 +150,14 @@ h1 {
 }
 
 .note {
+    text-decoration: none;
     animation: opacity 5s;
     text-align: center;
     letter-spacing: 4px;
     font-family: raleway;
     font-size: 0.75em;
+    font-style: italic;
     color: grey;
-    position: absolute;
     padding-left: auto;
     padding-right: auto;
 }
@@ -191,7 +183,6 @@ h1 {
     text-align: center;
     text-decoration: none;
     transition: all .3s ease-in-out;
-    color: white;
   }
 
 .fab:hover {
@@ -199,6 +190,13 @@ h1 {
 }
 
 
+.icon {
+    position: relative;
+    animation: opacity 3s;
+    text-decoration: none;
+    width: 35px;
+    vertical-align: middle;
+}
 
 .portfolio-item-wrapper {
     position: center;
@@ -231,8 +229,8 @@ h1 {
 }
 
 .column img {
-margin-top: 8px;
-vertical-align: middle;
+    margin-top: 8px;
+    vertical-align: middle;
 }
 
 .img-text-wrapper .subtitle {
@@ -330,56 +328,6 @@ vertical-align: middle;
       flex: 100%;
       max-width: 100%;
     }
-}
-/*Loading Bar*/
-.skillbar {
-	position:relative;
-	display:block;
-	margin-bottom:15px;
-	width:100%;
-	background:#eee;
-	height:35px;
-	border-radius:3px;
-	transition:0.1s linear;
-	transition-property:width, background-color;
-}
-.skillbar-title {
-	position:absolute;
-	top:0;
-	left:0;
-    width:140px;
-    font-family: arial,sans-serif;
-	font-weight:bold;
-	font-size:13px;
-	color:#ffffff;
-	background:#6adcfa;
-	border-top-left-radius:3px;
-	border-bottom-left-radius:3px;
-}
-.skillbar-title span {
-	display: block;
-	background:rgba(0, 0, 0, 0.1);
-	padding:0 20px;
-	height:35px;
-	line-height:35px;
-	border-top-left-radius:3px;
-	border-bottom-left-radius:3px;
-}
-.skillbar-bar {
-	height:35px;
-    width:0px;
-	background:#6adcfa;
-	border-radius:3px;
-}
-.skill-bar-percent {
-	position:absolute;
-	right:10px;
-	top:0;
-	font-size:11px;
-	height:35px;
-	line-height:35px;
-	color:#ffffff;
-	color:rgba(0, 0, 0, 0.4);
 }
 
 .center {
