@@ -175,10 +175,13 @@ html {
 
 .description {
     animation: opacity 2s;
+    position: relative;
     font-family: raleway;
     font-size: 1.3em;
     letter-spacing: 0.6px;
     color: black;
+    margin-bottom: 25px;
+    display: inline-block;
 }
 
 .subtitle {
@@ -218,7 +221,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, 550%);
-    transition: 200ms ease-in-out;
+    transition: 500ms ease-in-out;
     border: 1px solid black;
     border-radius: 10px;
     z-index: 10;
@@ -264,23 +267,29 @@ padding: 10px 15px;
 }
 
 #overlay {
-position: fixed;
-opacity: 0;
-transition: 200ms ease-in-out;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: rgba(0, 0, 0, .5);
-pointer-events: none;
+    position: fixed;
+    opacity: 0;
+    transition: 500ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
 }
 
 #overlay.active {
-opacity: 1;
-pointer-events: all;
-z-index: 4;
+    opacity: 1;
+    pointer-events: all;
+    z-index: 4;
 }
 
+video {
+    width: 100%;
+    height: auto;
+    max-width: 75%;
+    max-height: 50%;
+}
 /*Fonts*/
 @font-face {
     src: url(Fonts/Warownia.otf);
@@ -415,7 +424,15 @@ z-index: 4;
     padding: 0 4px;
   }
 
-.footer-content {
+.footer-content-left {
+    position: absolute;
+    font-family: arial, sans-serif;
+    letter-spacing: 2px;
+    padding-top: 50px;
+    text-align: left;
+}
+
+.footer-content-right {
     position: relative;
     font-family: arial, sans-serif;
     letter-spacing: 2px;
@@ -466,7 +483,7 @@ z-index: 4;
 @keyframes transitionIn {
     from {
         opacity:0;
-        transform: translatey(100%);
+        transform: translatey(15%);
     }
 
     to {
