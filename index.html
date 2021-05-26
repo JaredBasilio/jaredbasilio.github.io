@@ -9,6 +9,7 @@
         <script src="js/skills_bar.js"></script>
         <script src="js/scroll.js"></script>
         <script src="js/hover.js"></script>
+        <script defer src="popup.js"></script>
         <script src="https://kit.fontawesome.com/9703fc3f51.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -22,7 +23,7 @@
                         <a href="#aboutRef">About Me</a>
                     </div>
                     <div class="nav-link-wrapper hvr-underline-from-left">
-                        <a href="Resume.pdf"> Resume </a>
+                        <a href="Resume.pdf" target="_blank"> Resume </a>
                     </div>
                     <div class="nav-link-wrapper hvr-underline-from-left">
                         <a href="#projectRef"> Projects </a>
@@ -34,7 +35,7 @@
             <a id="coverRef" class="coverRef"></a>
             <div class="main-cover">
                 <p style="color: black;">
-                    hello! i'm jared :)(Website currently under construction)
+                    hello! i'm jared :)
                 </p>
             </div>
         </div>
@@ -102,15 +103,68 @@
             </div>
             <div class="content-wrapper">
                 <div class="row">
-                    <a href="Overfelt_Netflix.html" class="column grow">
+                    <a data-modal-target="#overfeltNetflix" class="column grow">
                         <img src="Images/Photos/Overfelt_Netflix.jpg" alt="">
                     </a>
-                    <a href="Pagandvls.html" class="column grow">
+                    <div class="modal" id="overfeltNetflix">
+                        <div class="modal-header">
+                        <div class="subtitle">Overfelt Netflix <a class="note">
+                            Fall 2018
+                        </a></div>
+                        <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body description">
+                            An intro made for a stranger things inspired video for my Spanish 3 class. 
+                            Made using Cinema 4d for the text animation/lighting and After Effects for the color correction.
+                            <a>
+                                <video width="854" height="480" controls>
+                                    <source src="Videos/Netflix Overfelt.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="overlay"></div>
+                    <a data-modal-target="#paganDvls" class="column grow">
                         <img src="Images/Photos/Pagandvls_Promo_1.jpg" alt="">
                     </a>
-                    <a href="RPW.html" class="column grow">
+                    <div class="modal" id="paganDvls">
+                        <div class="modal-header">
+                        <div class="subtitle">Pagandvls Promo <a class="note">
+                            Fall 2018
+                        </a></div>
+                        <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body description">
+                            Promotion video for Pagandvls clothing brand in Boston, Ma. Made using After Effects.
+                            <a>
+                                <video width="854" height="480" controls>
+                                    <source src="Videos/Pagandvls Promotion 1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                            </a>
+                        </div>
+                    </div>
+                    <a data-modal-target="#RPW" class="column grow">
                         <img src="Images/Photos/RPW.jpg" alt="">
                     </a>
+                    <div class="modal" id="RPW">
+                        <div class="modal-header">
+                        <div class="subtitle">RPW Outro <a class="note">
+                            Spring 2020
+                        </a></div>
+                        <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body description">
+                            Youtube outro made for fitness influencer RiccoPhinisee. Made using Adobe After Effects.
+                            <a>
+                                <video width="854" height="480" controls>
+                                    <source src="Videos/Ricco Outro.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
