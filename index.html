@@ -6,36 +6,26 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="Images/Icons/tabIcon.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="js/skills_bar.js"></script>
-        <script src="js/scroll.js"></script>
-        <script src="js/hover.js"></script>
-        <script defer src="popup.js"></script>
+        <script src=".js/scroll.js";></script>
+        <script src=".js/hover.js";></script>
+        <script defer src="popup.js";></script>
         <script src="https://kit.fontawesome.com/9703fc3f51.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="navbar">
-            <div class="nav-wrapper">
-                <div class="middle_direct">
-                    <div class="nav-link-wrapper hvr-underline-from-left">
-                        <a href="#coverRef"> Home </a>
-                    </div>
-                    <div class="nav-link-wrapper hvr-underline-from-left">
-                        <a href="#aboutRef">About Me</a>
-                    </div>
-                    <div class="nav-link-wrapper hvr-underline-from-left">
-                        <a href="Resume.pdf" target="_blank"> Resume </a>
-                    </div>
-                    <div class="nav-link-wrapper hvr-underline-from-left">
-                        <a href="#projectRef"> Projects </a>
-                    </div>
-                </div>
+        <nav class="navbar">
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#aboutRef" class="hvr-underline-from-left">About Me</a></li>
+                    <li><a href="#projects" class="hvr-underline-from-left">Projects</a></li>
+                    <li><a href="Resume_JaredBasilio.pdf" class="hvr-underline-from-left">Resume</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
         <div id="cover">
             <a id="coverRef" class="coverRef"></a>
             <div class="main-cover">
                 <p style="color: black;">
-                    hello! i'm jared :)
+                    hello, i'm jared
                 </p>
             </div>
         </div>
@@ -48,12 +38,9 @@
                     </h1>
                 </div>
                 <div class="description" style="display: flex;">
-                    <img src="Images/Photos/Berkeley.png" style="display: block; max-width: 350px; max-height: 350px; width: auto; height: auto;">
                     <p style="padding-left: 60px; vertical-align: center;">
-                        I am currently a rising sophomore pursuing Computer Science at UC Berkeley. <br/>
-                        <br/> My current academic interests are image processing but I am open to exploring many different disciplines. <br/>
-                        <br/>On my spare time I enjoy 
-                        watching effect breakdown video and playing an unhealthy amount of Tetr.io (Currently at 21000 TR).
+                        I am currently a rising sophomore(Graduating May 2024) pursuing Computer Science at <b>UC Berkeley</b>. <br/>
+                        <br/>
                     </p>
                 </div>
             </div>
@@ -63,8 +50,8 @@
                         skills
                     </h1>
                     <div class="description">
-                        <li>Languages - Java, Python, HTML/CSS/Javascipt</li>
-                        <li>Software - Git, Intellij, Adobe Creative Suite(After Effects, Photoshop, Illustrator), Windows OS</li>
+                        <li><b>Languages</b> - Java, Python, HTML/CSS/Javascipt</li>
+                        <li><b>Software</b> - Git, Intellij, Adobe Creative Suite(After Effects, Photoshop, Illustrator), Windows OS</li>
                     </div>
                 </div> 
             </div>
@@ -89,167 +76,93 @@
                     </div>
                 </div>
             </div>
-            <div id="socials" class="section">
-                <div class="description">
-                    
-                </div>
-            </div>
         </div>
         <div id="projects" class="section">
             <a id="projectRef" class="projectRef"></a>
             <div class="subtitle">
                 <h1>
-                    video projects/graphic design
+                    projects
                 </h1>
             </div>
-            <div class="content-wrapper">
-                <div class="row">
-                    <a data-modal-target="#overfeltNetflix" class="column grow">
-                        <img src="Images/Photos/Overfelt_Netflix.jpg" alt="">
-                    </a>
-                    <div class="modal" id="overfeltNetflix">
-                        <div class="modal-header">
-                        <div class="subtitle">Overfelt Netflix <a class="note">
-                            Fall 2018
-                        </a></div>
-                        <button data-close-button class="close-button">&times;</button>
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> all</button>
+                <button class="btn" onclick="filterSelection('motion')"> video</button>
+                <button class="btn" onclick="filterSelection('graphics')">graphics</button>
+                <button class="btn" onclick="filterSelection('coding')"> coding</button>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item motion">
+                    <div class="card">
+                        <img id="RPW" src="Images/Photos/RPW.jpg">
+                        <div class="container">
+                            <h4><b>RPW Intro</b></h4>
+                            <p>Video outro for riccophinisee</p>
                         </div>
-                        <div class="modal-body">
-                            <a class="description">
-                                An intro made for a stranger things inspired video for my Spanish 3 class. 
-                            Made using Cinema 4d for the text animation/lighting and After Effects for the color correction.
-                            </a>
-                            <a class = "video">
-                                <video width="854" height="480" controls>
-                                    <source src="Videos/Netflix Overfelt.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
+                    </div>
+                </div>
+                <div class="grid-item graphics">
+                    <div class="card">
+                        <img src="Images/Photos/donaldGlover.png">
+                        <div class="container">
+                            <h4><b>Donald Glover Portrait</b></h4>
+                            <p>Portrait of Donald Glover</p>
+                            <a href="https://www.behance.net/gallery/63823573/Donald-Glover-Portrait" target="_blank">
+                                <img src="Images/Icons/behance.png" class="source-icon">
                             </a>
                         </div>
                     </div>
-                    <div id="overlay"></div>
-                    <a data-modal-target="#paganDvls" class="column grow">
-                        <img src="Images/Photos/Pagandvls_Promo_1.jpg" alt="">
-                    </a>
-                    <div class="modal" id="paganDvls">
-                        <div class="modal-header">
-                        <div class="subtitle">Pagandvls Promo <a class="note">
-                            Fall 2018
-                        </a></div>
-                        <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="grid-item coding">
+                    <div class="card">
+                        <img src="Images/Photos/Gitlet.png">
+                        <div class="container">
+                            <h4><b>Gitlet</b></h4>
+                            <p>Gitlet is a version-control system that mimics the
+                                 basic features of the popular system Git.</p>
+                            <a href="https://sp21.datastructur.es/materials/proj/proj2/proj2" target="_blank">
+                                <img src="Images/Icons/info.png" class="source-icon">
+                            </a>     
                         </div>
-                        <div class="modal-body">
-                            <a class="description">Promotion video for Pagandvls clothing brand in Boston, Ma. Made using After Effects.</a>
-                            <a class="video">
-                                <video width="854" height="480" controls>
-                                    <source src="Videos/Pagandvls Promotion 1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
+                    </div>
+                </div>
+                <div class="grid-item coding">
+                    <div class="card">
+                        <img src="Images/Photos/BYOW.jpg">
+                        <div class="container">
+                            <h4><b>Build your own world!</b></h4>
+                            <p>Navigate against ghosts and find coins to become the ruler of the dungeon. 
+                                Joint project with Kevin Li.</p>
+                            <a href="https://www.youtube.com/watch?v=wXoUTw6EWV4" target="_blank">
+                                <img src="Images/Icons/youtube.png" class="source-icon">
                             </a>
                         </div>
                     </div>
-                    <a data-modal-target="#RPW" class="column grow">
-                        <img src="Images/Photos/RPW.jpg" alt="">
-                    </a>
-                    <div class="modal" id="RPW">
-                        <div class="modal-header">
-                        <div class="subtitle">RPW Outro <a class="note">
-                            Spring 2020
-                        </a></div>
-                        <button data-close-button class="close-button">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <a class="description">Youtube outro made for fitness influencer RiccoPhinisee. Made using Adobe After Effects.</a>
-                            <a class="video">
-                                <video width="854" height="480" controls>
-                                    <source src="Videos/Ricco Outro.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
+                </div>
+                <div class="grid-item graphics">
+                    <div class="card">
+                        <img src="Images/Photos/airMags.png">
+                        <div class="container">
+                            <h4><b>Air Mags Art</b></h4>
+                            <p>Air Mags art with custom concept logo</p>
+                            <a href="https://www.behance.net/gallery/62176197/3-Objects" target="_blank">
+                                <img src="Images/Icons/behance.png" class="source-icon">
                             </a>
                         </div>
                     </div>
-                    <a data-modal-target="#donaldGlover" class="column grow">
-                        <img src="Images/Photos/donaldGlover.png" alt="">
-                    </a>
-                    <div class="modal" id="donaldGlover">
-                        <div class="modal-header">
-                        <div class="subtitle">Donald Glover Portrait <a class="note">
-                            Spring 2018
-                        </a></div>
-                        <button data-close-button class="close-button">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <a class="description">
-                                Portrait of Donald Glover, made in Adobe Illustrator.
-                            </a>
-                        </div>
-                    </div>
-                    <a data-modal-target="#airMags" class="column grow">
-                        <img src="Images/Photos/airMags.png" alt="">
-                    </a>
-                    <div class="modal" id="airMags">
-                        <div class="modal-header">
-                        <div class="subtitle">Air Mags Art <a class="note">
-                            Winter 2018
-                        </a></div>
-                        <button data-close-button class="close-button">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <a class="description">
-                                Design of Air Mags and concept logo, made in Adobe Illustrator.
-                            </a>
+                </div>
+                <div class="grid-item motion">
+                    <div class="card">
+                        <img id="netflix" src="Images/Photos/Overfelt_Netflix.jpg">
+                        <div class="container">
+                            <h4><b>Overfelt Netflix Concept </b></h4>
+                            <p>Netflix Intro using for a Stranger Things inspired video project</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section">
-            <div class="subtitle">
-                <h1>
-                    coding projects
-                </h1>
-                <a class="note"> Disclaimer! Projects made for Berkeley CS classes cannot be publicly 
-                    available due to academic integrity. Source code can be sent upon request.</a>
-                <div class="content-wrapper">
-                    <div class="row">
-                        <a href="BYOW.html" class="column grow">
-                            <img src="Images/Photos/BYOW.jpg" alt="">
-                        </a>
-                        <a data-modal-target="#gitlet" class="column grow">
-                            <img src="Images/Photos/Gitlet.png" alt="">
-                        </a>
-                        <div class="modal" id="gitlet">
-                            <div class="modal-header">
-                            <div class="subtitle">Gitlet <a class="note">
-                                Winter 2021
-                            </a></div>
-                            <button data-close-button class="close-button">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <a class="description">
-                                    Gitlet is a small scale version of the popular version control program Github.
-                                    Using Java I made the functions init, add, commit, 
-                                    rm, log, global-log, find, status, checkout, branch, rm-branch, reset, and merge to controls
-                                    files on a local machine.
-                                    <a href="https://sp21.datastructur.es/materials/proj/proj2/proj2" target="_blank" class="description" style="text-decoration: none;">Spec</a>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="footer-content-left">
-                <a class="note">Last updated 5/28/2021</a>
-            </div>
-            <div class="footer-content-right">
-                <a>
-                    find me here 🠖  
-                </a>
-                <a class="note" href="mailto:jaredbasilio@berkeley.edu" target="_blank">
-                    jaredbasilio@berkeley.edu
-                </a>
+        <div class="footer-content">
+            <div class="socials">
                 <a href="https://www.linkedin.com/in/jared-andrew-basilio-6536941a6/" target="_blank" class="icon">
                     <img src="Images/Icons/linkedin.png" target="_blank" class="icon">
                 </a>
@@ -259,7 +172,38 @@
                 <a href="https://www.behance.net/basiliojared" target="_blank" class="icon">
                     <img src="Images/Icons/behance.png" class="icon">
                 </a>
+                <a href="mailto: jaredbasilio@berkeley.edu" target="_blank" class="icon">
+                    <img src="Images/Icons/email.png" class="icon">
+                </a>
             </div>
+            <a class="note" target="_blank">
+                made with HTML/CSS by Jared Andrew Basilio <br/> hosted by Github
+            </a>
         </div>
+        <script src="filter.js"></script>
+        <script>
+            $(function() {
+                $("#RPW").hover(
+                    function() {
+                        $(this).attr("src", "Images/gifs/Ricco Outro.gif");
+                    },
+                    function() {
+                        $(this).attr("src", "Images/Photos/RPW.jpg");
+                    }                         
+                );                  
+            });
+        </script>
+        <script>
+            $(function() {
+                $("#netflix").hover(
+                    function() {
+                        $(this).attr("src", "Images/gifs/Netflix Overfelt.gif");
+                    },
+                    function() {
+                        $(this).attr("src", "Images/Photos/Overfelt_Netflix.jpg");
+                    }                         
+                );                  
+            });
+        </script>
     </body>
 </html>
