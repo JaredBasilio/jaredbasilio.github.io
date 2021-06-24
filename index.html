@@ -91,7 +91,7 @@
                 <button class="btn" onclick="filterSelection('coding')"> coding</button>
             </div>
             <div class="grid-container">
-                <div class="grid-item motion" data-tilt data-tilt-reverse="true">
+                <div class="grid-item motion">
                     <div class="card">
                         <img id="RPW" src="Images/Photos/RPW.jpg">
                         <div class="container">
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item graphics" data-tilt data-tilt-reverse="true">
+                <div class="grid-item graphics">
                     <div class="card">
                         <img src="Images/Photos/donaldGlover.png">
                         <div class="container">
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item coding" data-tilt data-tilt-reverse="true">
+                <div class="grid-item coding">
                     <div class="card">
                         <img src="Images/Photos/Gitlet.png">
                         <div class="container">
@@ -128,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item coding" data-tilt data-tilt-reverse="true">
+                <div class="grid-item coding">
                     <div class="card">
                         <img src="Images/Photos/BYOW.jpg">
                         <div class="container">
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item graphics" data-tilt data-tilt-reverse="true">
+                <div class="grid-item graphics">
                     <div class="card">
                         <img src="Images/Photos/airMags.png">
                         <div class="container">
@@ -155,7 +155,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item motion" data-tilt data-tilt-reverse="true">
+                <div class="grid-item motion">
                     <div class="card">
                         <img id="netflix" src="Images/Photos/Overfelt_Netflix.jpg">
                         <div class="container">
@@ -188,6 +188,15 @@
         </div>
         <script src="filter.js"></script>
         <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelectorAll(".grid-item"), {
+                max: 12,
+                speed: 100,
+                reverse: true,
+                scale: 1.05,
+                easing: "cubic-bezier(0,.53,1,.47)"
+            });
+        </script>
         <script>
             $(function() {
                 $("#RPW").hover(

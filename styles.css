@@ -170,7 +170,6 @@ html {
     display: none;
 }
 
-
 @media (max-width: 1200px) {
     .grid-container {
         display: grid;
