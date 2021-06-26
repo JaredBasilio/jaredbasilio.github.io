@@ -5,10 +5,16 @@
 body {
     margin: 0;
     padding: 0;
+    color: black;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
 }
 
 
@@ -31,17 +37,16 @@ html {
     position: relative;
     align-items: center;
     justify-self: center;
-    margin: 0 auto;
+    margin: 250px auto;
     z-index: 1;
     width: 100%;
+    height: 100%;
+    justify-content: center;
     max-width: 1300px;
-    padding-right: 50px;
-    padding-left: 50px;
-    line-height: 64vh;
+    padding: 50px;
     text-align: center;
     font-family: helvetica, arial, sans-serif;
     font-size: 2.5em;
-    color: black;
 }
 
 
@@ -50,6 +55,15 @@ html {
     transition: 0.3s;
     width: 300px;
     border-radius: 10px;
+}
+
+.cardDark {
+    box-shadow: 0px 0px 59px -8px rgba(0,0,0,0.75);
+    transition: 0.3s;
+    width: 300px;
+    border-radius: 10px;
+    background: #1b1a1a;
+    
 }
 
 .card:hover {
@@ -75,7 +89,6 @@ html {
     font-family: raleway;
     font-size: 0.9em;
     letter-spacing: 0.6px;
-    color: black;
     display: block;
 }
 
@@ -115,14 +128,26 @@ html {
 }
 
 .navbar-links li a {
+    color: inherit;
     display: block;
     text-decoration: none;
     font-family: raleway;
-    color: black;
 }
 
+.darkModeIcon {
+    vertical-align: middle;
+    text-align: center;
+    margin-bottom: 20px;
+    height:30px;
+    width:auto;
+    transition:cubic-bezier(1, 0, 0, 1);
+    filter:opacity(100%);
+    transition: 500ms;
+}
 
-/*hover transitions*/
+.darkModeIcon:hover {
+    filter: opacity(70%);
+}
 
 /* Underline From Left */
 .hvr-underline-from-left {
@@ -208,7 +233,6 @@ html {
     font-family: raleway;
     font-size: 1.3em;
     letter-spacing: 0.6px;
-    color: black;
     margin-bottom: 15px;
     display: inline-block;
 }
@@ -216,8 +240,6 @@ html {
 .subtitle {
     font-family: Arial Outline, Helvetica, sans-serif;
     letter-spacing: 2px;
-    color: black;
-    margin-top: 20px;
 }
 
 .title {
@@ -234,7 +256,6 @@ html {
     font-family: raleway;
     font-size: 0.9em;
     font-style: bold;
-    color: black;
     padding-left: auto;
     padding-right: auto;
 }
@@ -254,6 +275,20 @@ html {
     cursor: pointer;
     background: none;
     position: relative;
+    color:black;
+}
+
+.whitebtn {
+    float: left;
+    font-family: raleway;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    background: none;
+    position: relative;
+    color:white;
 }
 
 .btn.active {
@@ -262,20 +297,6 @@ html {
 
 .show {
     display: block;
-}
-
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 550%);
-    transition: 500ms ease-in-out;
-    border: 1px solid black;
-    border-radius: 10px;
-    z-index: 10;
-    background-color: white;
-    width: 1000px;
-    max-width: 80%;
 }
 
 

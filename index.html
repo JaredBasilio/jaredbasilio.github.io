@@ -18,13 +18,14 @@
                     <li><a href="#aboutRef" class="hvr-underline-from-left">About Me</a></li>
                     <li><a href="#projects" class="hvr-underline-from-left">Projects</a></li>
                     <li><a href="Resume_JaredBasilio.pdf" class="hvr-underline-from-left">Resume</a></li>
+                    <li><button onclick="toggleDark()" style="border:none;outline:none;cursor:pointer;background:none;"><img id="toggleDarkMode" title="Toggle Dark Mode" src="Images/Icons/dark_moon.png" class="darkModeIcon"></button></li>
                 </ul>
             </div>
         </nav>
         <div id="cover">
             <a id="coverRef" class="coverRef"></a>
             <div class="main-cover">
-                <p style="color: black;">
+                <p>
                     hello, i'm jared
                 </p>
             </div>
@@ -190,10 +191,10 @@
         <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
         <script type="text/javascript">
             VanillaTilt.init(document.querySelectorAll(".grid-item"), {
-                max: 12,
+                max: 5,
                 speed: 100,
                 reverse: true,
-                scale: 1.05,
+                scale: 1.03,
                 easing: "cubic-bezier(0,.53,1,.47)"
             });
         </script>
@@ -220,6 +221,27 @@
                     }                         
                 );                  
             });
+        </script>
+        <script>
+            function toggleDark() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+                var btns = document.getElementsByClassName('btn');
+                for (let i = 0;i < btns.length;i++) {
+                    btns[i].classList.toggle("whitebtn");
+                }
+                var cards = document.getElementsByClassName('card');
+                for (let i = 0; i < cards.length;i++) {
+                    cards[i].classList.toggle("cardDark");
+                }
+                var img = document.getElementById('toggleDarkMode').src;
+                if (img.indexOf('light_moon.png')!=-1) {
+                    document.getElementById('toggleDarkMode').src  = 'Images/Icons/dark_moon.png';
+                }
+                else {
+                    document.getElementById('toggleDarkMode').src = 'Images/Icons/light_moon.png';
+                }
+            }
         </script>
     </body>
 </html>
