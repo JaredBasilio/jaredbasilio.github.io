@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <title href="index.html">Jared Basilio</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="icon" href="Images/Icons/tabIcon.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src=".js/scroll.js";></script>
@@ -32,20 +33,20 @@
         </div>
         <div>
             <a id="aboutRef" class="aboutRef"></a>
-            <div class="section">
+            <div class="section" data-aos="fade-left">
                 <div id="about" class="subtitle" style="padding-top: 170px;">
                     <h1>
                         about
                     </h1>
                 </div>
-                <div class="description" style="display: flex;">
-                    <p style="padding-left: 60px; vertical-align: center;">
+                <div class="description">
+                    <p style="vertical-align: center;">
                         I am currently a rising sophomore(Graduating May 2024) pursuing Computer Science at <b>UC Berkeley</b>. <br/>
                         <br/>
                     </p>
                 </div>
             </div>
-            <div class="section">
+            <div class="section" data-aos="fade-right">
                 <div class="subtitle">
                     <h1>
                         skills
@@ -56,7 +57,7 @@
                     </div>
                 </div> 
             </div>
-            <div class="section">
+            <div class="section" data-aos="fade-left">
                 <div class="subtitle">
                     <h1>notable past/current coursework</h1>
                 </div>
@@ -80,19 +81,21 @@
         </div>
         <div id="projects" class="section">
             <a id="projectRef" class="projectRef"></a>
-            <div class="subtitle">
-                <h1>
-                    projects
-                </h1>
-            </div>
-            <div id="myBtnContainer">
-                <button class="btn active" onclick="filterSelection('all')"> all</button>
-                <button class="btn" onclick="filterSelection('motion')"> video</button>
-                <button class="btn" onclick="filterSelection('graphics')">graphics</button>
-                <button class="btn" onclick="filterSelection('coding')"> coding</button>
+            <div data-aos="fade-up">
+                <div class="subtitle">
+                    <h1>
+                        projects
+                    </h1>
+                </div>
+                <div id="myBtnContainer">
+                    <button class="btn active" onclick="filterSelection('all')"> all</button>
+                    <button class="btn" onclick="filterSelection('motion')"> video</button>
+                    <button class="btn" onclick="filterSelection('graphics')">graphics</button>
+                    <button class="btn" onclick="filterSelection('coding')"> coding</button>
+                </div>
             </div>
             <div class="grid-container">
-                <div class="grid-item motion">
+                <div class="grid-item motion" data-aos="fade-up">
                     <div class="card">
                         <img id="RPW" src="Images/Photos/RPW.jpg">
                         <div class="container">
@@ -102,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item graphics">
+                <div class="grid-item graphics" data-aos="fade-up">
                     <div class="card">
                         <img src="Images/Photos/donaldGlover.png">
                         <div class="container">
@@ -115,7 +118,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item coding">
+                <div class="grid-item coding" data-aos="fade-up">
                     <div class="card">
                         <img src="Images/Photos/Gitlet.png">
                         <div class="container">
@@ -129,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item coding">
+                <div class="grid-item coding" data-aos="fade-up">
                     <div class="card">
                         <img src="Images/Photos/BYOW.jpg">
                         <div class="container">
@@ -140,10 +143,13 @@
                             <a href="https://www.youtube.com/watch?v=wXoUTw6EWV4" target="_blank">
                                 <img src="Images/Icons/youtube.png" class="source-icon">
                             </a>
+                            <a href="https://sp21.datastructur.es/materials/proj/proj3/proj3" target="_blank">
+                                <img src="Images/Icons/info.png" class="source-icon">
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="grid-item graphics">
+                <div class="grid-item graphics" data-aos="fade-up">
                     <div class="card">
                         <img src="Images/Photos/airMags.png">
                         <div class="container">
@@ -156,7 +162,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item motion">
+                <div class="grid-item motion" data-aos="fade-up">
                     <div class="card">
                         <img id="netflix" src="Images/Photos/Overfelt_Netflix.jpg">
                         <div class="container">
@@ -192,7 +198,7 @@
         <script type="text/javascript">
             VanillaTilt.init(document.querySelectorAll(".grid-item"), {
                 max: 5,
-                speed: 100,
+                speed: 200,
                 reverse: true,
                 scale: 1.03,
                 easing: "cubic-bezier(0,.53,1,.47)"
@@ -242,6 +248,30 @@
                     document.getElementById('toggleDarkMode').src = 'Images/Icons/light_moon.png';
                 }
             }
+        </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+            
+
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1000, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+            });
         </script>
     </body>
 </html>
