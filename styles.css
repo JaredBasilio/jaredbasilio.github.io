@@ -3,7 +3,7 @@
 }
 /* Master Styles*/
 body {
-    margin: 0;
+    margin: 0px 15%;
     padding: 0;
     color: black;
 }
@@ -51,9 +51,9 @@ html {
 
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.0);
     transition: 0.3s;
-    width: 500px;
+    width: 300px;
     border-radius: 10px;
 }
 
@@ -66,15 +66,12 @@ html {
     
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
   
 /* Add rounded corners to the top left and the top right corner of the image */
 .card > img {
-    border-radius: 10px 10px 0 0;
-    width:500px;
-    height: 500px;
+    border-radius: 10px;
+    width:300px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -89,7 +86,9 @@ html {
     font-family: raleway;
     font-size: 0.9em;
     letter-spacing: 0.6px;
+    line-height: 1.5em;
     display: block;
+    text-align: center;
 }
 
 .container {
@@ -181,7 +180,7 @@ html {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(150px, auto);
     grid-gap: 20px;
     justify-items: stretch;
@@ -223,6 +222,7 @@ html {
     letter-spacing: 0.6px;
     margin-bottom: 15px;
     display: inline-block;
+    line-height: 1.5em;
 }
 
 .subtitle {
@@ -412,6 +412,7 @@ html {
 
 .profile-content-wrapper h1 {
     color: lightseagreen;
+    color:rgb(127, 218, 164)
 }
 
 .row {
