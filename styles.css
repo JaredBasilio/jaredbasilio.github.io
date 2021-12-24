@@ -3,8 +3,9 @@
 }
 /* Master Styles*/
 body {
-    margin: 0px 15%;
+    margin: 0px 5%;
     padding: 0;
+    background-color: #f7f7f7;
     color: black;
 }
 
@@ -28,25 +29,30 @@ html {
 .aboutRef {
     position: relative;
     display: block;
-    top: 170px;
+    top: 100vh;
     visibility: hidden;
 }
 
 .main-cover {
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    align-items: center;
-    justify-self: center;
-    margin: 250px auto;
-    z-index: 1;
     width: 100%;
-    height: 100%;
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    max-width: 1300px;
-    padding: 50px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
     text-align: center;
-    font-family: helvetica, arial, sans-serif;
+    font-family: AbrialFatFace-Regular;
     font-size: 2.5em;
+
+    z-index: -1;
 }
 
 
@@ -66,7 +72,7 @@ html {
   
 /* Add rounded corners to the top left and the top right corner of the image */
 .card > img {
-    border-radius: 10px;
+    border-radius: 5px;
     width:300px;
     height: 300px;
     object-fit: cover;
@@ -110,7 +116,7 @@ html {
 }
 
 .navbar-links ul {
-    text-align: center;
+    text-align: right;
     margin: 0;
     padding: 0;
 }
@@ -118,9 +124,7 @@ html {
 .navbar-links li {
     list-style: none;
     display: inline-block;
-    padding: 2rem;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding: 1.25rem;
 }
 
 .navbar-links li a {
@@ -162,7 +166,7 @@ html {
     left: 0;
     right: 100%;
     bottom: 0;
-    background: #db5461;
+    background: #E2B147;
     height: 2px;
     -webkit-transition-property: right;
     transition-property: right;
@@ -179,10 +183,9 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(150px, auto);
-    grid-gap: 20px;
+    grid-gap: 10px;
     justify-items: stretch;
     align-items: stretch;
-
 }
 
 .grid-item {
@@ -196,7 +199,7 @@ html {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-auto-rows: minmax(150px, auto);
-        grid-gap: 20px;
+        grid-gap: 10px;
         justify-items: stretch;
         align-items: stretch;
     }
@@ -215,7 +218,6 @@ html {
 .description {
     position: relative;
     font-family: raleway;
-    font-size: 1.2em;
     letter-spacing: 0.6px;
     margin-bottom: 15px;
     display: inline-block;
@@ -223,7 +225,7 @@ html {
 }
 
 .subtitle {
-    font-family: Arial Outline, Helvetica, sans-serif;
+    font-family: AbrialFatFace-Regular;
     letter-spacing: 2px;
 }
 
@@ -231,7 +233,7 @@ html {
     font-family: Arial Outline, Helvetica, sans-serif;
     font-size: 1.2em;
     letter-spacing: 2px;
-    color:#db5461;
+    color:#E2B147;
 }
 
 .note {
@@ -277,7 +279,7 @@ html {
 }
 
 .btn.active {
-    color: #db5461;
+    color: #E2B147;
 }
 
 .show {
@@ -286,7 +288,7 @@ html {
 
 
 .close-button:hover{
-    color: #db5461;
+    color: #E2B147;
     transform: scale(1.25); 
 }
 
@@ -320,7 +322,7 @@ html {
   }
 
 .fab:hover {
-    color: #db5461;
+    color: #E2B147;
 }
 
 .socials {
