@@ -109,6 +109,7 @@ html {
 .navbar {
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
 .navbar-links {
@@ -125,6 +126,7 @@ html {
     list-style: none;
     display: inline-block;
     padding: 1.25rem;
+    font-size: 0.85em;
 }
 
 .navbar-links li a {
