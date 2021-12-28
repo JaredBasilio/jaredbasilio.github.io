@@ -3,8 +3,9 @@
 }
 /* Master Styles*/
 body {
-    margin: 0px 5%;
-    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
     background-color: #f7f7f7;
     color: black;
 }
@@ -46,7 +47,7 @@ html {
     left: 0;
     top: 0;
     bottom: 0;
-    margin: auto;
+    margin: 0;
 
     text-align: center;
     font-family: AbrialFatFace-Regular;
@@ -79,14 +80,14 @@ html {
 }
 
 .container > h4 {
-    font-family: helvetica, arial, sans-serif;
+    font-family: AktivGroteskCorp-Light;
     text-align: center;
     font-size: 1.3em;
 }
 
 .container > p {
     position: relative;
-    font-family: raleway;
+    font-family: AktivGroteskCorp-Light;
     font-size: 0.9em;
     letter-spacing: 0.6px;
     line-height: 1.5em;
@@ -105,6 +106,13 @@ html {
     animation: transitionIn 1s;
 }
 
+/*divider*/
+.divider {
+    background:rgb(127, 218, 164);
+    width: 100vw;
+    height: auto;
+}
+
 /*Nav Styles*/
 .navbar {
     justify-content: space-between;
@@ -118,14 +126,13 @@ html {
 
 .navbar-links ul {
     text-align: right;
-    margin: 0;
-    padding: 0;
+    padding: 0 1em;
 }
 
 .navbar-links li {
     list-style: none;
     display: inline-block;
-    padding: 1.25rem;
+    padding: 0 1.25rem;
     font-size: 0.85em;
 }
 
@@ -133,7 +140,7 @@ html {
     color: inherit;
     display: block;
     text-decoration: none;
-    font-family: raleway;
+    font-family: AktivGroteskCorp-Light;
 }
 
 .darkModeIcon {
@@ -221,17 +228,22 @@ html {
 
 /*Info*/
 .section {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
     flex-direction: column;
+    display: flex;
+    padding: 0 15%;
 }
 
+.about {
+
+}
+
+.darkabout {
+    background-color: rgb(24, 24, 24);
+}
 
 .description {
     position: relative;
-    font-family: raleway;
+    font-family: AktivGroteskCorp-Light;
     letter-spacing: 0.6px;
     margin-bottom: 15px;
     display: inline-block;
@@ -343,11 +355,11 @@ html {
     justify-content: space-between;
 }
 .icon {
+    vertical-align: middle;
     position: relative;
     text-decoration: none;
     width: 25px;
     margin: 15px;
-    vertical-align: middle;
     filter: brightness(0.65);
 }
 
@@ -436,12 +448,10 @@ html {
 
 .footer-content {
     position: relative;
-    font-family: arial, sans-serif;
+    font-family: AktivGroteskCorp-Light;
     letter-spacing: 2px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding:1.5em 0;
     text-align: center;
-    background: none;
 }  
 
 #footer {
