@@ -224,10 +224,25 @@ html {
         grid-gap: 10px;
         justify-items: stretch;
         align-items: stretch;
-
     }
 }
 
+td, th {
+    letter-spacing: 0.6px;
+    margin-bottom: 15px;
+    line-height: 1.5em;
+    padding: 8px;
+    border: 1px solid black;
+    font-weight: normal;
+}
+
+table {
+    background: rgb(236, 236, 236);
+    padding: 5px;
+    width: 100%;
+    font-family: AktivGroteskCorp-Light;
+    border-collapse: collapse;
+}
 
 /*Info*/
 .section {
@@ -274,6 +289,16 @@ html {
     margin-bottom: 15px;
     display: inline-block;
     line-height: 1.5em;
+}
+
+.description i {
+    font-family: AktivGroteskCorp-LightItalic;
+}
+
+.math {
+    position: relative;
+    font-family: AktivGroteskCorp-Light;    
+    display: inline-block;
 }
 
 .subtitle {
@@ -600,3 +625,4 @@ html {
     font-size: 1.25em;
     margin-top: 0.25em;
 }
+

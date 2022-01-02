@@ -10,6 +10,10 @@
         <script src=".js/scroll.js";></script>
         <script src=".js/hover.js";></script>
         <script defer src="popup.js";></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async 
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
         <script src="https://kit.fontawesome.com/9703fc3f51.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -27,7 +31,8 @@
             </div>
             <div class="description">
                 <i>CS70 Abridged</i> is a comprehensive set of notes derived from the 
-                Fall 2021 term. Some popular topics are not covered in this version.
+                Fall 2021 term made by Jared Andrew Basilio. Some popular topics are not covered in this version. This Website
+                should not serve as a substitute for class notes, only as a supplement/review.
             </div>
         </div>
         <div class="section">
@@ -36,7 +41,46 @@
                     propositional logic
                 </h1></div>
             <div class="description">
-                
+                <table>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <th><span class="math display">\[\forall\]</span></th>
+                        <th>For All</th>
+                        <th>All of <i>P</i> is true.</th>
+                    </tr>
+                    <tr>
+                        <th><span class="math display">\[\exists\]</span></th>
+                        <th>There Exists</th>
+                        <th>There exists a <i>P</i> which makes the statement true.</th>
+                    </tr>
+                    <tr>
+                        <th><span class="math display">\[\neg\]</span></th>
+                        <th>negation</th>
+                        <th>Not <i> P</i></th>
+                    </tr>
+                    <tr>
+                        <th><span class="math display">\[\lor\]</span></th>
+                        <th>Logical Or</th>
+                        <th>Either <i> P</i> or <i>Q</i> is true</th>
+                    </tr>
+                    <tr>
+                        <th><span class="math display">\[\land\]</span></th>
+                        <th>Logical And</th>
+                        <th>Both <i>P</i> and<i>Q</i> are true</th>
+                    </tr>
+                    <tr>
+                        <th><span class="math display">\[\implies\]</span></th>
+                        <th>Implication</th>
+                        <th>If <i> P </i>then<i> Q</i>.</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="description">
+                <table></table>
             </div>
         </div>
         <div class="section">
@@ -45,7 +89,7 @@
                     proofs
                 </h1></div>
             <div class="description">
-
+                under construction
             </div>
         </div>
         <div class="section">
@@ -54,7 +98,46 @@
                     stable matching
                 </h1></div>
             <div class="description">
-
+                The Stable Matching Algorithm is a pairing of two groups of n
+                such that the resulting pair is happy. Each individual of each group
+                will have a ranking of the other candidates of the other group.
+                <table>
+                    <tr><th colspan="2">Stable Matching Procedure for a day</th></tr>
+                    <tr>
+                        <th>
+                            Morning
+                        </th>
+                        <th>
+                            All jobs will send an offer to the candidate on the top of their list
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Afternoon</th>
+                        <th>Each candidate that received an offer will reject all offers 
+                            <i>except</i> the one that is the highest on their respective list.</th>
+                    </tr>
+                    <tr>
+                        <th>Evening</th>
+                        <th>Each job that just got rejected will cross off that candidate
+                            from the list.</th>
+                    </tr>
+                    <tr><th colspan="2">Repeat this process until all candidates and jobs are paired</th></tr>
+                </table>
+            </div>
+            <div class="description">
+                Observations from this algorithm:
+                <ul>
+                    <li>Will always halt with a matching taking at most <span class="math display ">\[n^2\]</span> days.</li>
+                    <li>Improvement Lemma: the job on the candidates
+                        string can only get better while the candidate on the
+                        jobs string can only get worse.
+                    </li>
+                    <li>Rogue Pairing: There exists a job and candidate that prefers each other over
+                        their current matching. This implies that matching is <i>unstable</i>.
+                    </li>
+                    <li>The group that is offering is optimal for them. i.e Stable Matching is Job Optimal</li>
+                </ul>
+                An example for this procedure can be found <a href="https://www.youtube.com/watch?v=RE5PmdGNgj0&ab_channel=MITOpenCourseWare">here</a>.
             </div>
         </div>
         <div class="section">
@@ -63,7 +146,7 @@
                     graphs
                 </h1></div>
             <div class="description">
-
+                under construction
             </div>
         </div>
         <div class="section">
@@ -72,7 +155,7 @@
                     modular arithmetic
                 </h1></div>
             <div class="description">
-
+                under construction
             </div>
         </div>
         <div class="section">
@@ -81,7 +164,7 @@
                     RSA
                 </h1></div>
             <div class="description">
-
+                under construction
             </div>
         </div>
         <div class="section">
@@ -90,7 +173,7 @@
                     polynomials
                 </h1></div>
             <div class="description">
-
+                under construction
             </div>
         </div>
         <div class="section">
@@ -99,7 +182,7 @@
                     error correction
                 </h1></div>
             <div class="description">
-
+                under construction
             </div>
         </div>
         <div class="section">
@@ -108,7 +191,7 @@
                     counting
                 </h1></div>
             <div class="description">
-
+                under construction
             </div>
         </div>
         <div class="section">
@@ -117,7 +200,7 @@
                     countability
                 </h1></div>
             <div class="description">
-
+                under construction
             </div>
         </div>
         <div class="section">
@@ -126,7 +209,7 @@
                     computability
                 </h1></div>
             <div class="description">
-
+                under construction
             </div>
         </div>
         <div class="section">
@@ -135,7 +218,7 @@
                     discrete probability
                 </h1></div>
             <div class="description">
-
+                under construction
             </div>
         </div>
         <div class="section">
@@ -144,7 +227,7 @@
                     continuous probability
                 </h1></div>
             <div class="description">
-
+                under construction
             </div>
         </div>
         <div class="footer-content">
@@ -167,9 +250,6 @@
             </a>
         </div>
         <script src="filter.js"></script>
-        <script type="text/javascript"
-  src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js">
-  </script
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     </body>
 </html>
