@@ -306,6 +306,19 @@ table {
     letter-spacing: 2px;
 }
 
+.subsection {
+    padding: 10px;
+}
+
+.jc {
+    padding: 10px;
+    display: flex;
+}
+
+.jc table {
+    margin: 10px;
+}
+
 .title {
     font-family: Arial Outline, Helvetica, sans-serif;
     font-size: 1.2em;

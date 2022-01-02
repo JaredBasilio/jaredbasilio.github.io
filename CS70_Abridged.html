@@ -98,36 +98,74 @@
                     stable matching
                 </h1></div>
             <div class="description">
-                The Stable Matching Algorithm is a pairing of two groups of n
-                such that the resulting pair is happy. Each individual of each group
-                will have a ranking of the other candidates of the other group.
-                <table>
-                    <tr><th colspan="2">Stable Matching Procedure for a day</th></tr>
-                    <tr>
-                        <th>
-                            Morning
-                        </th>
-                        <th>
-                            All jobs will send an offer to the candidate on the top of their list
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>Afternoon</th>
-                        <th>Each candidate that received an offer will reject all offers 
-                            <i>except</i> the one that is the highest on their respective list.</th>
-                    </tr>
-                    <tr>
-                        <th>Evening</th>
-                        <th>Each job that just got rejected will cross off that candidate
-                            from the list.</th>
-                    </tr>
-                    <tr><th colspan="2">Repeat this process until all candidates and jobs are paired</th></tr>
-                </table>
+                <div class="subsection">
+                    The Stable Matching Algorithm is a pairing of two groups of n
+                    such that the resulting pair is happy. Each individual of each group
+                    will have a ranking of the other candidates of the other group from
+                    most preferred to least preferred.<br><br>
+                    Example of Ranking Table:
+                </div>
+                <div class="subsection jc">
+                    <table>
+                        <tr><th colspan="2">Candidates</th></tr>
+                        <tr>
+                            <th>A</th>
+                            <th>3 > 1 > 2</th>
+                        </tr>
+                        <tr>
+                            <th>B</th>
+                            <th>1 > 3 > 2</th>
+                        </tr>
+                        <tr>
+                            <th>C</th>
+                            <th>3 > 2 > 1</th>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr><th colspan="2">Jobs</th></tr>
+                        <tr>
+                            <th>1</th>
+                            <th>A > B > C</th>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <th>C > B > C</th>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <th>C > A > B</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="subsection">
+                    <table>
+                        <tr><th colspan="2">Stable Matching Procedure for a day</th></tr>
+                        <tr>
+                            <th>
+                                Morning
+                            </th>
+                            <th>
+                                All jobs will send an offer to the candidate on the top of their list
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Afternoon</th>
+                            <th>Each candidate that received an offer will reject all offers 
+                                <i>except</i> the one that is the highest on their respective list.</th>
+                        </tr>
+                        <tr>
+                            <th>Evening</th>
+                            <th>Each job that just got rejected will cross off that candidate
+                                from the list.</th>
+                        </tr>
+                        <tr><th colspan="2">Repeat this process until all candidates and jobs are paired</th></tr>
+                    </table>
+                </div>
             </div>
-            <div class="description">
+            <div class="description subsection">
                 Observations from this algorithm:
                 <ul>
-                    <li>Will always halt with a matching taking at most <span class="math display ">\[n^2\]</span> days.</li>
+                    <li>Will always halt with a matching taking at most <span class="math display">\[n^2\]</span> days.</li>
                     <li>Improvement Lemma: the job on the candidates
                         string can only get better while the candidate on the
                         jobs string can only get worse.
