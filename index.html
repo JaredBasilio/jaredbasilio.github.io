@@ -194,6 +194,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="grid-item motion">
+                    <div class="card">
+                        <img id="gotSole" src="Images/Photos/got_sole.jpg">
+                        <div class="container">
+                            <h4><b>Got Sole Retro Intro</b></h4>
+                            <p>Intro for Got Sole in a retro/8-bit style</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div>
@@ -257,6 +266,18 @@
                     },
                     function() {
                         $(this).attr("src", "Images/Photos/Overfelt_Netflix.jpg");
+                    }                         
+                );                  
+            });
+        </script>
+        <script>
+            $(function() {
+                $("#gotSole").hover(
+                    function() {
+                        $(this).attr("src", "https://media.giphy.com/media/kYf8e6ZM1bcAjkviOV/giphy.gif");
+                    },
+                    function() {
+                        $(this).attr("src", "Images/Photos/got_sole.jpg");
                     }                         
                 );                  
             });
