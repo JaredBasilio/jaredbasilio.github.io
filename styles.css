@@ -639,3 +639,13 @@ table {
     margin-top: 0.25em;
 }
 
+.mathPair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.mathPair span {
+    margin: 0px 20px;
+}
