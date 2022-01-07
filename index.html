@@ -17,9 +17,9 @@
             <div class="navbar-links">
                 <ul>
                     <li><button onclick="toggleDark()" style="border:none;outline:none;cursor:pointer;background:none;"><img id="toggleDarkMode" title="Toggle Dark Mode" src="Images/Icons/dark_moon.png" class="darkModeIcon"></button></li>
-                    <li><a href="#aboutRef" class="hvr-underline-from-left">About Me</a></li>
-                    <li><a href="#projects" class="hvr-underline-from-left">Projects</a></li>
-                    <li><a href="Resume_JaredBasilio.pdf" class="hvr-underline-from-left">Resume</a></li>
+                    <li><a href="#about" class="up">About Me</a></li>
+                    <li><a href="#projectRef" class="up">Projects</a></li>
+                    <li><a href="Resume_JaredBasilio.pdf" class="up">Resume</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,7 +33,6 @@
         </div>
         <div style="padding-top: 100vh;"></div>
         <div>
-            <a id="aboutRef" class="aboutRef"></a>
             <div id="about" class="section about" style="padding:3em 15%;">
                 <div class="subtitle">
                     <h1>
@@ -98,7 +97,7 @@
             </div>
         </div>
         <div id="projects" class="section">
-            <a id="projectRef" class="projectRef"></a>
+            <a id="projectRef" style="position: relative;top:-50px"></a>
             <div>
                 <div class="subtitle">
                     <h1>
@@ -245,6 +244,7 @@
                 made with HTML/CSS by Jared Andrew Basilio <br/> hosted by Github
             </a>
         </div>
+        <div id="grad"></div>
         <script src="filter.js"></script>
         <script>
             $(function() {
@@ -301,8 +301,6 @@
                 else {
                     document.getElementById('toggleDarkMode').src = 'Images/Icons/light_moon.png';
                 }
-                var a = document.getElementById('about');
-                a.classList.toggle("darkabout");
                 console.log('dark mode enabled')
             }
         </script>
