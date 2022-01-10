@@ -41,7 +41,7 @@
                     </h1>
                 </div>
                 <div class="description">
-                    <p style="vertical-align: center;">
+                    <p>
                         I am currently a sophomore pursuing Computer Science at 
                         <b><a href="http://stanforrejects.com/" style="text-decoration: none; color: inherit;">UC Berkeley</a>
                         </b> interested in pursuing a career in front-end development! 
@@ -52,22 +52,28 @@
                         <ul>
                             <li>UC Berkeley EECS course staff as an academic intern for <b><a href="https://cs61bl.org/su21/" style="text-decoration: none; color: inherit;">CS 61BL</a></b>
                         </ul>
-                        Relevant Coursework <button onclick="revealCoursework()" style="border:none;outline:none;cursor:pointer;background:none;"><img src="Images/Icons/down-arrow-pngrepo-com.png" class="dropdownButton"></button>
+                        Relevant Coursework <button onclick="revealCoursework()" style="border:none;outline:none;cursor:pointer;background:none;" id="dropdownCW"><img src="Images/Icons/down-arrow-pngrepo-com.png" class="dropdownButton"></button>
                         <div id="course" class="coursework">
                             <ul>
-                                <li>Structure and Interpretation of Computer Programs</li>
-                                <li>Data Structures and Algorithms</li>
-                                <li>Designing Information Devices and Systems I/II</li>
-                                <li>Discrete Mathematics and Probability</li>
-                                <li>Multivariable Calculus</li>
-                                <li>Introductory iOS Application Programming</li>
-                                <li>Efficient Algorithms and Intractable Problems*</li>
-                                <li>Artificial Intelligence*</li>
-                                <li>Introduction to Probability and Statistics*</li>
+                                <li>Computer Science</li>
+                                <ul>
+                                    <li>Structure and Interpretation of Computer Programs (CS 61A)</li>
+                                    <li>Data Structures and Algorithms (CS 61B)</li>
+                                    <li>Introductory iOS Application Programming (CS 198)</li>
+                                    <li>Efficient Algorithms and Intractable Problems* (CS 170)</li>
+                                    <li>Artificial Intelligence* (CS 188)</li>
+                                    <li>Designing Information Devices and Systems I/II (EECS 16A/16B)</li>
+                                </ul>
+                                <li>Statistics & Math</li>
+                                <ul>
+                                    <li>Multivariable Calculus (Math 53)</li>   
+                                    <li>Discrete Mathematics and Probability (CS 70)</li>
+                                    <li>Introduction to Probability and Statistics* (Stat 20)</li>
+                                </ul>
                             </ul>
                             (*) denotes current coursework
                         </div>
-                        Skills</i> <button onclick="revealSkills()" style="border:none;outline:none;cursor:pointer;background:none;"><img src="Images/Icons/down-arrow-pngrepo-com.png" class="dropdownButton"></button>
+                        Skills</i> <button onclick="revealSkills()" style="border:none;outline:none;cursor:pointer;background:none;" id="dropdownSkills"><img src="Images/Icons/down-arrow-pngrepo-com.png" class="dropdownButton"></button>
                         <div id="skills" class="coursework">
                             <ul>
                                 <li>Languages</li>
