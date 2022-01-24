@@ -382,27 +382,27 @@ table {
 
 /*Fonts*/
 @font-face {
-    src: url(Fonts/Warownia.otf);
+    src: url(./Fonts/Warownia.otf);
     font-family: Helvetica Neue;
 }
 @font-face {
-    src: url(Fonts/WarowniaUlt.otf);
+    src: url(./Fonts/WarowniaUlt.otf);
     font-family: Helvetica Bold;
 }
 @font-face {
-    src: url(Fonts/Raleway-Light.ttf);
+    src: url(./Fonts/Raleway-Light.ttf);
     font-family: Raleway;
 }
 @font-face {
-    src: url(Fonts/AktivGroteskCorp-Light.ttf);
+    src: url(./Fonts/AktivGroteskCorp-Light.ttf);
     font-family: AktivGroteskCorp-Light;
 }
 @font-face {
-    src: url(Fonts/AktivGroteskCorp-LightItalic.ttf);
+    src: url(./Fonts/AktivGroteskCorp-LightItalic.ttf);
     font-family: AktivGroteskCorp-LightItalic;
 }
 @font-face {
-    src: url(Fonts/AbrilFatface-Regular.ttf);
+    src: url(./Fonts/AbrilFatface-Regular.ttf);
     font-family: AbrilFatface-Regular;
 }
 
