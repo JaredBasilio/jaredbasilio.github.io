@@ -393,6 +393,19 @@ table {
     src: url(Fonts/Raleway-Light.ttf);
     font-family: Raleway;
 }
+@font-face {
+    src: url(Fonts/AktivGroteskCorp-Light.ttf);
+    font-family: AktivGroteskCorp-Light;
+}
+@font-face {
+    src: url(Fonts/AktivGroteskCorp-LightItalic.ttf);
+    font-family: AktivGroteskCorp-LightItalic;
+}
+@font-face {
+    src: url(Fonts/AbrilFatface-Regular.ttf);
+    font-family: AbrilFatface-Regular;
+}
+
 
 /*Portfolio Styles*/
 .fab {
