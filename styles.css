@@ -122,7 +122,6 @@ ul {
     right: 0;
     width: 100%;
     line-height: 3.5;
-    backdrop-filter: blur(20px) brightness(100%);
     z-index: 1;
 }
 
@@ -643,6 +642,17 @@ table {
 .image__description {
     font-size: 1.25em;
     margin-top: 0.25em;
+}
+
+.gif {
+    transition: all 0.5s ease-in-out;
+}
+
+.gif:hover {
+    -webkit-box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.15); 
+    box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.15);
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.03)
 }
 
 .mathPair {
