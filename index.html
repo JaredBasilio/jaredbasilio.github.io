@@ -19,7 +19,7 @@
                     <li><button onclick="toggleDark()" style="border:none;outline:none;cursor:pointer;background:none;"><img id="toggleDarkMode" title="Toggle Dark Mode" src="Images/Icons/dark_moon.png" class="darkModeIcon"></button></li>
                     <li><a href="#about" class="up">About Me</a></li>
                     <li><a href="#projectRef" class="up">Projects</a></li>
-                    <li><a href="#notes" class="up">Notes</a></li>
+                    <!--<li><a href="#notes" class="up">Notes</a></li>-->
                     <li><a href="Resume_JaredBasilio.pdf" class="up">Resume</a></li>
                 </ul>
             </div>
@@ -37,23 +37,22 @@
             <div id="about" class="section about" style="padding:3em 15%;">
                 <div class="subtitle">
                     <h1>
-                        about
+                        bio
                     </h1>
                 </div>
                 <div class="description">
-                    <p>
-                        I am currently a sophomore pursuing Computer Science at 
-                        <b><a href="http://stanfordrejects.com/" style="text-decoration: none; color: inherit;">UC Berkeley</a>
-                        </b> interested in pursuing a career in front-end development! 
-                        My other interests involve motion design and digital art. Currently looking for
-                        Summer 2022 research and internship opportunities.<br/><br/>
-                        When i'm not doing these things, I am a tetris addict and am a typical MCU/Anime fan.
-                        <br /><br />Previously I was involved in,
-                        <ul>
-                            <li>UC Berkeley EECS course staff as an academic intern for <b><a href="https://cs61bl.org/su21/" style="text-decoration: none; color: inherit;">CS 61BL</a></b>
-                        </ul>
-                        Relevant Coursework <button onclick="revealCoursework()" style="border:none;outline:none;cursor:pointer;background:none;" id="dropdownCW"><img src="Images/Icons/down-arrow-pngrepo-com.png" class="dropdownButton"></button>
-                        <div id="course" class="coursework">
+                    <div>
+                        <p style="text-indent: 50px;">
+                            Hi I'm Jared! (hence the landing page) and am currently a sophomore pursuing Computer Science at 
+                            <b><a href="http://stanfordrejects.com/" class="link">UC Berkeley</a>.
+                            </b> Growing up in San Jose, Ca, I always loved creating things whether is ranged from Lego technic robots to short videos highlighting
+                            me and my friends greatest video game moments. My career interest is in front-end development! On campus I am involved in <b><a href="https://www.innod.club/" class="link">Innovative Design</a></b> as a 
+                            web developer and <b><a href="https://pasae.berkeley.edu/" class="link">PASAE</a></b>. Currently I am working as a Visual Designer for <b><a href="https://re-treat.app/" class="link">Echo</a></b>.
+                            <br><br>
+                        </p>
+                    </div>
+                    <div class="inactive">
+                        <p>
                             <ul>
                                 <li>Computer Science</li>
                                 <ul>
@@ -72,42 +71,16 @@
                                 </ul>
                             </ul>
                             (*) denotes current coursework
-                        </div>
-                        Skills</i> <button onclick="revealSkills()" style="border:none;outline:none;cursor:pointer;background:none;" id="dropdownSkills"><img src="Images/Icons/down-arrow-pngrepo-com.png" class="dropdownButton"></button>
-                        <div id="skills" class="coursework">
-                            <ul>
-                                <li>Languages</li>
-                                <ul>
-                                    <li>Java</li>
-                                    <li>Python</li>
-                                    <li>HTML/CSS</li>
-                                    <li>Javascript</li>
-                                    <li>Swift</li>
-                                    <li>SQL</li>
-                                </ul>
-                                <li>Frameworks/Libraries</li>
-                                <ul>
-                                    <li>React.js</li>
-                                    <li>JUnit</li>
-                                    <li>Numpy</li>
-                                </ul>
-                                <li>Tools/Software</li>
-                                <ul>
-                                    <li>Windows OS</li>
-                                    <li>Adobe Creative Cloud</li>
-                                    <li>Git</li>
-                                </ul>
-                            </ul>
-                        </div>
-                    </p>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="projects" class="section">
             <a id="projectRef" style="position: relative;top:-50px"></a>
-            <div>
-                <div class="subtitle">
-                    <h1>
+            <div style="padding:15px 0">
+                <div class="subtitle" >
+                    <h1 class="multi-header">
                         projects
                     </h1>
                 </div>
@@ -121,7 +94,7 @@
             <div class="grid-container">
                 <div class="grid-item motion">
                     <div class="card">
-                        <img id="RPW" src="Images/Photos/RPW.jpg" class="gif">
+                        <img id="RPW" src="Images/Photos/RPW.jpg">
                         <div class="container">
                             <h4><b>RPW Outro</b></h4>
                             <p>Video outro for fitness influencer riccophinisee</p>
@@ -133,10 +106,7 @@
                         <img src="Images/Photos/donaldGlover.png">
                         <div class="container">
                             <h4><b>Donald Glover Portrait</b></h4>
-                            <p>Portrait of rapper, comedian, actor, director, Donald Glover</p>
-                            <a href="https://www.behance.net/gallery/63823573/Donald-Glover-Portrait" target="_blank">
-                                <img src="Images/Icons/behance.png" class="source-icon">
-                            </a>
+                            <p>Rapper, comedian, actor, director</p>
                         </div>
                     </div>
                 </div>
@@ -145,8 +115,8 @@
                         <img src="Images/Photos/Gitlet.png">
                         <div class="container">
                             <h4><b>Gitlet</b></h4>
-                            <p>Gitlet is a version-control system that mimics the
-                                 basic features of the popular system Git. Developed using Java.</p>
+                            <p>Version-control system that mimics the
+                                 basic features of the popular system Git.</p>
                             <a href="https://sp21.datastructur.es/materials/proj/proj2/proj2" target="_blank">
                                 <img src="Images/Icons/info.png" class="source-icon">
                             </a>     
@@ -158,8 +128,7 @@
                         <img src="Images/Photos/pomo.png">
                         <div class="container">
                             <h4><b>Pomodoro Google Extension</b></h4>
-                            <p>Built a google extension to aid in using the pomodoro studying technique. Developed
-                                using HTML, CSS, and JavaScript
+                            <p>Study Helper
                             </p>
                             <a href="https://github.com/JaredBasilio/Pomodoro-Timer-Google-Extension" target="_blank">
                                 <img src="Images/Icons/Github.png" class="source-icon">
@@ -172,9 +141,7 @@
                         <img src="Images/Photos/BYOW.jpg">
                         <div class="container">
                             <h4><b>Ghost Runner</b></h4>
-                            <p>Interactive game where you try to evade ghosts while collecting coins. Involves character select,
-                                game saving capabilities, and pseudo-random world seen generation.
-                                Joint project with Kevin Li.</p>
+                            <p>Evade Ghosts and Collect Coins</p>
                             <a href="https://www.youtube.com/watch?v=wXoUTw6EWV4" target="_blank">
                                 <img src="Images/Icons/youtube.png" class="source-icon">
                             </a>
@@ -199,15 +166,12 @@
                         <div class="container">
                             <h4><b>Air Mags Art</b></h4>
                             <p>Air Mags art with custom concept logo</p>
-                            <a href="https://www.behance.net/gallery/62176197/3-Objects" target="_blank">
-                                <img src="Images/Icons/behance.png" class="source-icon">
-                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="grid-item motion">
                     <div class="card">
-                        <img id="netflix" src="Images/Photos/Overfelt_Netflix.jpg" class="gif">
+                        <img id="netflix" src="Images/Photos/Overfelt_Netflix.jpg">
                         <div class="container">
                             <h4><b>Overfelt Netflix Concept </b></h4>
                             <p>Netflix Inspired Intro using for a Stranger Things inspired video project</p>
@@ -216,7 +180,7 @@
                 </div>
                 <div class="grid-item motion">
                     <div class="card">
-                        <img id="gotSole" src="Images/Photos/got_sole.jpg" class="gif">
+                        <img id="gotSole" src="Images/Photos/got_sole.jpg">
                         <div class="container">
                             <h4><b>Got Sole Retro Intro</b></h4>
                             <p>Intro for Got Sole in a retro/8-bit style</p>
@@ -225,6 +189,7 @@
                 </div>
             </div>
         </div>
+        <!--
         <div>
             <div class="section">
                 <div id="notes" class="subtitle">
@@ -234,7 +199,7 @@
                 </div>
                 <div class="description">
                     <p style="vertical-align: center;">
-                        made some cool notes for classes I enjoyed :)
+                        have my notes, not the best...not the worst
                     </p>
                     <ul>
                         <li><a href="CS70 Final Cheat Sheet.pdf" style="text-decoration: none;color:inherit">CS70 Final Cheat Sheet</a></li>
@@ -244,7 +209,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="footer-content">
             <div class="socials">
                 <a href="https://www.linkedin.com/in/jaredandrewbasilio/" target="_blank" class="icon">

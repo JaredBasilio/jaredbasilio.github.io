@@ -55,8 +55,9 @@ html {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.0);
     transition: 0.3s;
+    border-radius: 15px;
     width: 300px;
-    border-radius: 10px;
+    overflow:hidden;
 }
 
 .cardDark {
@@ -68,10 +69,19 @@ html {
   
 /* Add rounded corners to the top left and the top right corner of the image */
 .card > img {
-    border-radius: 5px;
-    width:300px;
-    height: 300px;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.5s ease;
+    width: 300px;
+    height: 250px;
     object-fit: cover;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.card:hover > img {
+    width: 100%;
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
 }
 
 .container > h4 {
@@ -92,6 +102,7 @@ html {
 
 .container {
     padding: 0px 16px;
+    border-radius: 15px;
 }
 .main-cover > p {
     animation: transitionIn 1s;
@@ -118,8 +129,6 @@ ul {
     text-align: center;
     vertical-align: baseline;
     position: fixed;
-    float: right;
-    right: 0;
     width: 100%;
     line-height: 3.5;
     z-index: 1;
@@ -130,7 +139,6 @@ ul {
 }
 
 .navbar-links ul {
-    text-align: right;
     padding: 0 1.25em;
     border: 0;
 }
@@ -154,6 +162,10 @@ ul {
     top: 0;
     transition: top 0.2s ease;
     position: relative;
+    background: rgba(255, 255, 255, 0.39);
+    padding: 0 12px;
+    border-radius: 90px;
+    backdrop-filter: blur(2px);
 }
 
 .up:hover {
@@ -181,7 +193,7 @@ ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(150px, auto);
-    grid-gap: 10px;
+    grid-gap: 25px;
     justify-items: stretch;
     align-items: stretch;
     width: 100%;
@@ -191,6 +203,16 @@ ul {
     align-self: start;
     justify-self: center;
     display: none;
+    -webkit-box-shadow: 0px 0px 17px 5px rgba(0,0,0,0.23); 
+    box-shadow: 0px 0px 17px 5px rgba(0,0,0,0.10);
+    border-radius: 15px;
+    transition: all 0.25s;
+    transform: translateY(0);
+}
+
+.grid-item:hover {
+    transform: translateY(-3%);
+    transition: all 0.25s;
 }
 
 @media screen and (max-width: 1100px) {
@@ -277,10 +299,13 @@ table {
 .description {
     position: relative;
     font-family: AktivGroteskCorp-Light;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.11rem;
     margin-bottom: 15px;
     display: inline-block;
     line-height: 1.5em;
+    width: 50%;
+    text-align: left;
+    margin: auto;
 }
 
 .description i {
@@ -296,6 +321,16 @@ table {
 .subtitle {
     font-family: AbrialFatFace-Regular;
     letter-spacing: 2px;
+    display: inline;
+    clear: both;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.multi-header {
+    padding: 0 0.3em;
+    float: right;
+    margin: 0;
 }
 
 .subsection {
@@ -433,9 +468,7 @@ table {
 }
 
 .source-icon {
-    float: left;
     position: relative;
-    text-align: left;
     text-decoration: none;
     width: 25px;
     filter: brightness(0.45);
@@ -644,17 +677,6 @@ table {
     margin-top: 0.25em;
 }
 
-.gif {
-    transition: all 0.5s ease-in-out;
-}
-
-.gif:hover {
-    -webkit-box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.15); 
-    box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.15);
-    transition: all 0.5s ease-in-out;
-    transform: scale(1.03)
-}
-
 .mathPair {
     display: flex;
     justify-content: center;
@@ -666,3 +688,27 @@ table {
     margin: 0px 20px;
 }
 
+.link {
+    text-decoration: none;
+    color: #E2B147;
+    background-color: #ffcc6d5b;
+    padding: 3px;
+    transition: all 0.5s;
+}
+
+.link:hover {
+    transition: all 0.5s;
+    color: #e2d5b9;
+}
+
+.inactive-header {
+    color: rgb(173, 173, 173);
+}
+
+.active-header {
+    color: black;
+}
+
+.inactive {
+    display: none;
+}
