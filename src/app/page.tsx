@@ -19,16 +19,20 @@ export default function Home() {
         />
         <div>
           <h1 className="text-3xl font-extrabold pb-2 items-center">
-              sup, i'm jared
-            </h1>
+              {'sup, i\'m jared'}
+          </h1>
           <p>
-            I'm currently completing my BA in Computer Science and Data Science at UC Berkeley and am 
-            interested in the intersection between design and technology. 
-            Currently, I am developing ways to learn about the human decision process in common work scenarios.
-            My previous experience involves building products at <a>Uber</a> that assist the marketer experience.
+            {
+              'I\'m currently completing my BA in Computer Science and Data Science at UC Berkeley and am \
+              interested in the intersection between design and technology. \
+              Currently, I am developing ways to learn about the human decision process in common work scenarios. \
+              My previous experience involves building products at Uber that assist the marketer experience.'
+            }
             <br /><br />
-            Beyond engineering, I enjoy all things fitness, basketball related content 
-            (playing is a different story...), motion graphics, and tetris above other games lol.
+            {
+            'Beyond engineering, I enjoy all things fitness, basketball related content \
+            (playing is a different story...), motion graphics, and tetris above other games lol.'
+            }
           </p>
           <div className="flex">
             <Link href="https://github.com/JaredBasilio">
